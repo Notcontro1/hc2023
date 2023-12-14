@@ -1,101 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
     <style>
-      #carousel {
-        display: flex;
-        overflow-x: auto;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        margin: 0 auto 0 auto;
-        width: 90vw;
-        height: fit-content;
-        border: solid #511589 0.5px;
+      /* Toggle Theme */
+      :root {
+        --bg-color: white;
+        --text-color: black;
       }
-
-      #carousel::-webkit-scrollbar {
-        display: none;
-        -webkit-overflow-scrolling: touch;
+      .dark-theme {
+        --bg-color: rgb(57, 57, 57);
+        --text-color: white;
       }
-
-      .item {
-        min-width: 300px;
-        min-height: 20vh;
-        margin: 15px;
-        font-size: 5em;
-        text-align: center;
-        line-height: 300px;
-        background-color: #c68a21;
-        border-radius: 7px;
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
       }
-
-      .navbar {
-        overflow: hidden;
-        background-color: #ffffff;
+      #toggle {
         position: fixed;
-        top: 0;
-        width: 100%;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
       }
-
-      .navbar a {
-        float: left;
-        display: block;
-        color: #746c6c;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      .navbar a:hover {
-        background: #ddd;
-        color: rgb(255, 255, 255);
-      }
-
-      .main {
-        margin-top: 30px;
+      #toggle:hover {
+        background-color: gray;
       }
     </style>
   </head>
-
-  <body style="background: rgb(84, 84, 84)">
-    <div id="carousel">
-      <div class="item">
-        <img src="./picvs.jpeg" alt="" />
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html"
+          >Stop Cyberbullying</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <!-- Use 'me-auto' class to shift items to the left -->
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Effects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news">Impacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Prevention</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="item">
-        <img src="./download.png" alt="" />
+    </nav>
+
+    <div style="margin-top: 90px">
+      <!-- Impacts -->
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <img src="./—Pngtree—cartoon hand-drawn facial features with_5551146.png" alt="" class="w-100" />
+          </div>
+          <div class="col-6 fw-bolder">
+            <h1 class="row">Impact of Flaming</h1>
+            <p class="row">
+              <span style="color: red"
+                >Emotional and Psychological Effects:</span
+              >
+              Flaming can cause severe emotional distress, leading to feelings
+              of humiliation, anger, anxiety, depression, and even suicidal
+              thoughts. The constant barrage of hostile messages can
+              significantly impact the mental health and well-being of the
+              victim.
+            </p>
+            <p class="row">
+              <span style="color: red"
+                >Low Self-Esteem and Self-Confidence:</span
+              >
+              Being subjected to flaming can damage a person's self-esteem and
+              confidence. Constant negative feedback and attacks can make
+              victims doubt themselves and their abilities.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+      <!-- IJum -->
 
-    <div class="navbar shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-    </div>
+      <!-- Effects -->
+      <!-- EJum -->
 
-    <div class="main">
-      <p>Some text some text some text some text..</p>
-    </div>
+      <!-- Prevention -->
+      <!-- PJum -->
 
-    <img src="./download.png" alt="" />
-    <img src="./download.png" alt="" />
-    <img src="./download.png" alt="" />
-    <img src="./download.png" alt="" />
-    <img src="./download.png" alt="" />
-    <img src="./download.png" alt="" />
-    <img src="./download.png" alt="" />
+      <!-- Toggle Theme Button -->
+      <button id="toggle">Theme</button>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -103,14 +123,34 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Jg6SrVsh6bVRViRTZK42VxFIzvynA+ndD04YYH0DXT8+0TkzjK8E2fPLDnvO5f5k"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Toggle Theme -->
+    <script>
+      // Get the root element
+      const root = document.documentElement;
+      // Get the toggle button
+      const toggle = document.getElementById("toggle");
+      // Get the user's preference from localStorage
+      const darkMode = localStorage.getItem("dark-mode");
+      // Check if the user has already chosen a theme
+      if (darkMode) {
+        // If yes, apply it to the root element
+        root.classList.add("dark-theme");
+      }
+      // Add an event listener to the toggle button
+      toggle.addEventListener("click", () => {
+        // Toggle the dark-theme class on the root element
+        root.classList.toggle("dark-theme");
+        // Store or remove the user's preference in localStorage
+        if (root.classList.contains("dark-theme")) {
+          localStorage.setItem("dark-mode", true);
+        } else {
+          localStorage.removeItem("dark-mode");
+        }
+      });
+    </script>
   </body>
 </html>
